@@ -39,6 +39,7 @@ docker build -t vulnerable-redirect .
 docker run -p 5000:5000 vulnerable-redirect
 ```
 [!](screenshots/builda.png)
+![Test Example 1](screenshots/builda.png)
 [!](screenshots/buildb.png)
 [!](screenshots/buildc.png)
 
