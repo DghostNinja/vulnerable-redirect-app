@@ -38,10 +38,7 @@ cd vulnerable-redirect-app
 docker build -t vulnerable-redirect .
 docker run -p 5000:5000 vulnerable-redirect
 ```
-[!](screenshots/builda.png)
-![Test Example 1](screenshots/builda.png)
-[!](screenshots/buildb.png)
-[!](screenshots/buildc.png)
+![Demo](screenshots/ezgif.com-crop.gif)
 
 ### 3️⃣ Test for Open Redirect
 Visit the following URL in your browser or use `curl`:
