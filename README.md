@@ -29,7 +29,7 @@ A simple **Flask-based vulnerable web application** designed for **testing Open 
 ## 🚀 Quick Start Guide
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/vulnerable-redirect-app.git
+git clone https://github.com/DghostNinja/vulnerable-redirect-app.git
 cd vulnerable-redirect-app
 ```
 
@@ -56,5 +56,5 @@ http://localhost:5000/redirect?url=http://evil.com
 ## 🤝 Contributing
 Feel free to submit **issues or pull requests** to improve this tool!
 
-📧 **Contact:** [Your Email or GitHub Profile]
+📧 **Contact:** [https://github.com/DghostNinja/]
 
