@@ -8,14 +8,10 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install flask
+RUN pip install -r requirements.txt
 
-# Expose ports for both applications
-EXPOSE 5000 5001
+# Expose port
+EXPOSE 5000
 
-# Copy the startup script
-COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
-
-# Run the startup script
-CMD ["/app/start.sh"]
+# Run the application
+CMD ["python", "app.py"]
