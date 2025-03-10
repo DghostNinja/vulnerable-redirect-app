@@ -1,9 +1,9 @@
-rom flask import Flask, request, redirect
+from flask import Flask, request, redirect, jsonify
 
 app = Flask(__name__)
 
-# Common redirect parameters to test
-REDIRECT_PARAMS = ["url", "redirect", "next", "return", "goto"]
+# List of vulnerable redirect parameters
+VULNERABLE_PARAMS = ["url", "redirect", "next", "return", "goto"]
 
 @app.route('/')
 def home():
@@ -20,13 +20,13 @@ def home():
     """
 
 @app.route('/redirect')
-def vulnerable_redirect():
-    for param in REDIRECT_PARAMS:
+def open_redirect():
+    for param in VULNERABLE_PARAMS:
         if param in request.args:
             target = request.args.get(param)
-            if target:
-                return redirect(target)
-    return "No valid redirect parameter provided", 400
+            app.logger.warning(f"Redirecting to: {target}")
+            return redirect(target, code=302)
+    return jsonify({"error": "No redirect parameter provided"}), 400
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
