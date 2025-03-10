@@ -10,8 +10,12 @@ COPY . /app
 # Install dependencies
 RUN pip install flask
 
-# Expose port
-EXPOSE 5000
+# Expose ports for both applications
+EXPOSE 5000 5001
 
-# Run the application
-CMD ["python", "vulnerable_redirect_app.py"]
+# Copy the startup script
+COPY start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
+# Run the startup script
+CMD ["/app/start.sh"]
