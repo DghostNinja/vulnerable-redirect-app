@@ -18,7 +18,7 @@ A simple **Flask-based vulnerable web application** designed for **testing Open 
 ```
 /vulnerable-redirect-app
 │── Dockerfile                # Contains Docker build instructions
-│── vulnerable_redirect_app.py # The vulnerable Flask app
+│── app.py # The vulnerable Flask app
 │── requirements.txt           # Dependencies (Flask)
 │── README.md                  # Documentation
 └── .gitignore                 # Excludes unnecessary files
@@ -57,5 +57,5 @@ http://localhost:5000/redirect?url=http://evil.com
 ## 🤝 Contributing
 Feel free to submit **issues or pull requests** to improve this tool!
 
-📧 **Contact:** [https://github.com/DghostNinja/]
+📧 **Contact:** [https://github.com/DghostNinja || X:@Dghost_Ninja]
 
